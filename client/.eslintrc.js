@@ -16,6 +16,21 @@ module.exports = {
     "vue/multi-word-component-names": "off",
     "vue/singleline-html-element-content-newline": "off",
     "vue/multiline-html-element-content-newline": "off",
-    "quotes": ["error", "double"]
+    "vue/html-self-closing": ["error", {
+      "html": {
+        "void": "never",
+        "normal": "always",
+        "component": "always"
+      },
+      "svg": "always",
+      "math": "always"
+    }],
+    "quotes": ["error", "double"],
+    "space-before-function-paren": ["error", {
+      "anonymous": "never",
+      "named": "never",
+      "asyncArrow": "never"
+    }],
+    "arrow-parens": ["error", "always"]
   },
 };

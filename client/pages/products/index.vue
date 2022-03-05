@@ -1,14 +1,13 @@
 <template>
-  <div id="app">
+  <div>
     <div class="container">
-      <Hero />
       <LargeCardDisplay
-        v-for="cardInfo in largeCardInfo"
+        v-for="cardInfo in largeCardInfo.slice(0, 1)"
         :key="cardInfo.id"
         :cards-section="cardInfo"
       />
       <SmallCardDisplay
-        v-for="cardInfo in smallCardSections"
+        v-for="cardInfo in smallCardInfo"
         :key="cardInfo.id"
         :cards-section="cardInfo"
       />
@@ -22,8 +21,11 @@ export default {
   data() {
     return {
       largeCardInfo: largeCardSections,
-      smallCardSections
+      smallCardInfo: smallCardSections
     }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+</style>

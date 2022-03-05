@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <NuxtLink :to="`/products/${card.id}`" class="card">
     <img
       :src="require(`@/assets/images/${card.image || 'fe1.jpg'}`)"
       alt="fire extinguisher"
@@ -11,7 +11,7 @@
     <p class="snippet">
       {{ card.snippet }}
     </p>
-  </div>
+  </NuxtLink>
 </template>
 
 <script>
@@ -36,6 +36,11 @@ export default {
   overflow: hidden;
   padding: 0;
   cursor: pointer;
+  color: initial;
+
+  &:hover {
+    text-decoration: none;
+  }
 
   .image {
     height: 65%;
